@@ -1,15 +1,253 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOST TOWN | FIVEM RP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOST TOWN | FIVEM RP</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #090d16;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #101827;
+    padding: 22px 15px;
+    text-align: center;
+    border-bottom: 2px solid #c49b45;
+}
+
+header h1 {
+    color: #d8b45c;
+    font-size: 27px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #aab2c0;
+    margin-top: 8px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: #0d1421;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #344052;
+    border-radius: 7px;
+}
+
+nav a:hover {
+    background: #c49b45;
+    color: #090d16;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 15px;
+    background: linear-gradient(145deg, #17243a, #090d16);
+}
+
+.hero h2 {
+    color: #d8b45c;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #c1c7d0;
+    line-height: 1.8;
+}
+
+section {
+    padding: 30px 15px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.section-title {
+    color: #d8b45c;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #121c2b;
+    border: 1px solid #344052;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #d8b45c;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #aab2c0;
+    line-height: 1.7;
+}
+
+.soon-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.soon-tabs button {
+    background: #17243a;
+    color: white;
+    border: 1px solid #c49b45;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.soon-tabs button.active {
+    background: #c49b45;
+    color: #090d16;
+}
+
+.hint {
+    color: #d8b45c;
+    text-align: center;
+    margin: 15px;
+}
+
+.slots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.slot {
+    background: #121c2b;
+    border: 1px solid #344052;
+    padding: 18px;
+    text-align: center;
+    border-radius: 8px;
+    color: #d8b45c;
+    font-size: 20px;
+}
+
+footer {
+    background: #101827;
+    border-top: 1px solid #c49b45;
+    text-align: center;
+    padding: 25px 10px;
+    color: #aab2c0;
+    margin-top: 35px;
+}
+
+@media (max-width: 400px) {
+    .hero h2 { font-size: 25px; }
+    nav a { padding: 9px; }
+}
+</style>
 </head>
+
 <body>
 
+<header>
     <h1>LOST TOWN</h1>
-    <h2>FIVEM ROLEPLAY</h2>
-    <p>مرحباً بك في الموقع الرسمي لدولة لوس تاون</p>
+    <p>FIVE M ROLEPLAY</p>
+</header>
+
+<nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#laws">القوانين</a>
+    <a href="#soon">SOON</a>
+</nav>
+
+<div class="hero" id="home">
+    <h2>مرحباً بك في LOST TOWN</h2>
+    <p>الموقع الرسمي لقوانين وأنظمة دولة لوس تاون</p>
+</div>
+
+<section id="laws">
+    <h2 class="section-title">أقسام القوانين</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>القوانين العامة</h3>
+            <p>قسم القوانين العامة للدولة</p>
+        </div>
+
+        <div class="card">
+            <h3>قوانين السيناريو</h3>
+            <p>قسم قوانين السيناريوهات</p>
+        </div>
+
+        <div class="card">
+            <h3>قوانين الوزارات</h3>
+            <p>قسم أنظمة وقرارات الوزارات</p>
+        </div>
+    </div>
+</section>
+
+<section id="soon">
+    <h2 class="section-title">الأقسام القادمة</h2>
+
+    <div class="soon-tabs">
+        <button class="active" onclick="showTab(1, this)">SOON 1</button>
+        <button onclick="showTab(2, this)">SOON 2</button>
+    </div>
+
+    <div id="hint" class="hint">تلميح ( وزارة )</div>
+
+    <div class="slots" id="slots"></div>
+</section>
+
+<footer>
+    LOST TOWN | FIVEM RP
+    <p>جميع الحقوق محفوظة © 2026</p>
+</footer>
+
+<script>
+function showTab(number, button) {
+    document.querySelectorAll(".soon-tabs button")
+        .forEach(b => b.classList.remove("active"));
+
+    button.classList.add("active");
+
+    document.getElementById("hint").textContent =
+        number === 1 ? "تلميح ( وزارة )" : "تلميح ( ضد الدولة )";
+
+    document.getElementById("slots").innerHTML =
+        Array.from({length: 10}, () =>
+            '<div class="slot">؟؟؟</div>'
+        ).join("");
+}
+
+showTab(1, document.querySelector(".soon-tabs button"));
+</script>
 
 </body>
-</html>
+    </html>
+        
