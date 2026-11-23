@@ -5,249 +5,319 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOST TOWN | FIVEM RP</title>
-
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: #090d16;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background: #101827;
-    padding: 22px 15px;
-    text-align: center;
-    border-bottom: 2px solid #c49b45;
-}
-
-header h1 {
-    color: #d8b45c;
-    font-size: 27px;
-    letter-spacing: 2px;
-}
-
-header p {
-    color: #aab2c0;
-    margin-top: 8px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 15px;
-    background: #0d1421;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border: 1px solid #344052;
-    border-radius: 7px;
-}
-
-nav a:hover {
-    background: #c49b45;
-    color: #090d16;
-}
-
-.hero {
-    text-align: center;
-    padding: 65px 15px;
-    background: linear-gradient(145deg, #17243a, #090d16);
-}
-
-.hero h2 {
-    color: #d8b45c;
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    color: #c1c7d0;
-    line-height: 1.8;
-}
-
-section {
-    padding: 30px 15px;
-    max-width: 950px;
-    margin: auto;
-}
-
-.section-title {
-    color: #d8b45c;
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 24px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-}
-
-.card {
-    background: #121c2b;
-    border: 1px solid #344052;
-    border-radius: 12px;
-    padding: 25px 15px;
-    text-align: center;
-}
-
-.card h3 {
-    color: #d8b45c;
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: #aab2c0;
-    line-height: 1.7;
-}
-
-.soon-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-
-.soon-tabs button {
-    background: #17243a;
-    color: white;
-    border: 1px solid #c49b45;
-    padding: 12px 22px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.soon-tabs button.active {
-    background: #c49b45;
-    color: #090d16;
-}
-
-.hint {
-    color: #d8b45c;
-    text-align: center;
-    margin: 15px;
-}
-
-.slots {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.slot {
-    background: #121c2b;
-    border: 1px solid #344052;
-    padding: 18px;
-    text-align: center;
-    border-radius: 8px;
-    color: #d8b45c;
-    font-size: 20px;
-}
-
-footer {
-    background: #101827;
-    border-top: 1px solid #c49b45;
-    text-align: center;
-    padding: 25px 10px;
-    color: #aab2c0;
-    margin-top: 35px;
-}
-
-@media (max-width: 400px) {
-    .hero h2 { font-size: 25px; }
-    nav a { padding: 9px; }
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#090d16;color:white;font-family:Arial,sans-serif;line-height:1.8}
+header{text-align:center;padding:28px 12px;background:#101827;border-bottom:2px solid #c49b45}
+header h1{color:#d8b45c;font-size:30px;letter-spacing:2px}
+header p{color:#aab2c0}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;padding:15px;background:#0d1421}
+nav a{color:white;text-decoration:none;border:1px solid #344052;padding:8px 13px;border-radius:7px}
+nav a:hover{background:#c49b45;color:#090d16}
+.hero{text-align:center;padding:55px 12px;background:linear-gradient(145deg,#17243a,#090d16)}
+.hero h2{color:#d8b45c;font-size:28px}
+.hero p{color:#c1c7d0;margin-top:10px}
+section{max-width:950px;margin:auto;padding:30px 14px}
+.section-title{text-align:center;color:#d8b45c;margin-bottom:22px}
+details{background:#121c2b;border:1px solid #344052;border-radius:10px;margin:12px 0;overflow:hidden}
+summary{cursor:pointer;padding:16px;color:#d8b45c;font-weight:bold}
+.content{padding:5px 18px 20px;color:#e0e4eb}
+.content h3{color:#d8b45c;margin:18px 0 8px}
+.content ol{padding-right:25px}
+.content li{padding:4px 0}
+.content p{margin:8px 0}
+.soon-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:15px}
+.soon-tabs button{background:#17243a;color:white;border:1px solid #c49b45;padding:12px 22px;border-radius:8px}
+.soon-tabs button.active{background:#c49b45;color:#090d16}
+.hint{text-align:center;color:#d8b45c;margin:15px}
+.slots{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.slot{background:#121c2b;border:1px solid #344052;padding:16px;text-align:center;border-radius:8px;color:#d8b45c}
+footer{text-align:center;background:#101827;border-top:1px solid #c49b45;padding:25px;color:#aab2c0;margin-top:30px}
 </style>
 </head>
-
 <body>
 
 <header>
-    <h1>LOST TOWN</h1>
-    <p>FIVE M ROLEPLAY</p>
+<h1>LOST TOWN</h1>
+<p>FIVE M ROLEPLAY</p>
 </header>
 
 <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#laws">القوانين</a>
-    <a href="#soon">SOON</a>
+<a href="#home">الرئيسية</a>
+<a href="#laws">القوانين</a>
+<a href="#soon">SOON</a>
 </nav>
 
 <div class="hero" id="home">
-    <h2>مرحباً بك في LOST TOWN</h2>
-    <p>الموقع الرسمي لقوانين وأنظمة دولة لوس تاون</p>
+<h2>مرحباً بك في LOST TOWN</h2>
+<p>الموقع الرسمي لقوانين وأنظمة دولة لوس تاون</p>
 </div>
 
 <section id="laws">
-    <h2 class="section-title">أقسام القوانين</h2>
+<h2 class="section-title">قوانين الدولة</h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>القوانين العامة</h3>
-            <p>قسم القوانين العامة للدولة</p>
-        </div>
+<details>
+<summary>🏥 قوانين وزارة الصحة</summary>
+<div class="content">
+<h3>أولاً: القوانين العامة</h3>
+<ol>
+<li>الالتزام بالرول بلاي والتصرف بواقعية في جميع الحالات.</li>
+<li>احترام جميع المواطنين والقطاعات الحكومية.</li>
+<li>الالتزام بالزي الرسمي والرتبة المحددة.</li>
+<li>يمنع استغلال الوظيفة أو الصلاحيات لتحقيق مصالح شخصية.</li>
+<li>يمنع إفشاء أسرار المرضى أو معلوماتهم الخاصة.</li>
+<li>يمنع استخدام سيارات الإسعاف لأغراض شخصية.</li>
+<li>يمنع التدخل في عمل القطاعات الأخرى دون تنسيق.</li>
+<li>الالتزام بتعليمات الإدارة والقيادة الطبية.</li>
+<li>يمنع استخدام معلومات خارج الرول بلاي (Meta Gaming).</li>
+<li>يمنع استغلال الأخطاء البرمجية أو الصلاحيات.</li>
+</ol>
 
-        <div class="card">
-            <h3>قوانين السيناريو</h3>
-            <p>قسم قوانين السيناريوهات</p>
-        </div>
+<h3>ثانياً: قوانين المسعفين</h3>
+<ol>
+<li>يجب الاستجابة لبلاغات الطوارئ حسب الأولوية.</li>
+<li>الالتزام بالهدوء والاحترافية أثناء تقديم الإسعافات.</li>
+<li>يمنع إنعاش أي شخص دون تنفيذ إجراءات الرول بلاي المطلوبة.</li>
+<li>يجب فحص المصاب وتقييم حالته قبل تقديم العلاج.</li>
+<li>يمنع ترك المصاب قبل استقرار حالته أو تسليمه للجهة المختصة.</li>
+<li>يمنع إنعاش الأشخاص أثناء إطلاق النار أو وجود خطر مباشر قبل تأمين الموقع.</li>
+<li>يجب التنسيق مع الشرطة عند وجود موقع جريمة أو خطر أمني.</li>
+<li>يمنع استغلال حالات الإنعاش لمساعدة الأصدقاء أو الأقارب دون وجه حق.</li>
+<li>يجب الالتزام بتعليمات الطبيب أو المسؤول المناوب.</li>
+<li>يمنع تقديم العلاج الوهمي أو إساءة استخدام الأدوات الطبية.</li>
+</ol>
 
-        <div class="card">
-            <h3>قوانين الوزارات</h3>
-            <p>قسم أنظمة وقرارات الوزارات</p>
-        </div>
-    </div>
+<h3>ثالثاً: قوانين سيارات الإسعاف</h3>
+<ol>
+<li>يمنع استخدام مركبة الإسعاف دون تصريح وظيفي.</li>
+<li>يمنع استخدام المنبهات والأضواء التحذيرية دون حالة تستدعي ذلك.</li>
+<li>يجب القيادة بحذر مع مراعاة سلامة المواطنين.</li>
+<li>يمنع صدم المركبات أو تعريض الآخرين للخطر دون ضرورة.</li>
+<li>يجب إعادة المركبة إلى المقر بعد انتهاء المهمة.</li>
+<li>يمنع نقل المواطنين لأغراض شخصية باستخدام الإسعاف.</li>
+<li>يجب الإبلاغ عن أي حادث أو ضرر يصيب المركبة.</li>
+</ol>
+
+<h3>رابعاً: قوانين المستشفى</h3>
+<ol>
+<li>يمنع إشهار الأسلحة داخل المستشفى إلا وفق إجراءات الأمن والطوارئ المعتمدة.</li>
+<li>يمنع إثارة الفوضى أو الاعتداء على الموظفين والمرضى.</li>
+<li>يجب احترام خصوصية المرضى وعدم نشر معلوماتهم.</li>
+<li>يمنع رفض استقبال الحالات الطارئة دون سبب مبرر.</li>
+<li>يجب إعطاء الحالات الحرجة الأولوية حسب خطورتها.</li>
+<li>يمنع إجراء أي عملية أو علاج خارج صلاحيات الموظف.</li>
+<li>يمنع إخراج الأدوية أو المعدات الطبية دون تصريح.</li>
+<li>يمنع استغلال المستشفى لإخفاء المطلوبين أو مساعدة المجرمين خارج الإجراءات المعتمدة.</li>
+</ol>
+
+<h3>خامساً: قوانين التعامل مع القطاعات الأمنية</h3>
+<ol>
+<li>الالتزام بالتنسيق مع الشرطة في مواقع الحوادث الخطرة.</li>
+<li>يمنع عرقلة عمل الشرطة أو التدخل في إجراءاتها دون ضرورة طبية.</li>
+<li>يجب تقديم الإسعافات للمصابين دون تمييز.</li>
+<li>يمنع إفشاء المعلومات الطبية الخاصة للمصابين إلا وفق النظام المعتمد.</li>
+<li>يجب الالتزام بتعليمات تأمين الموقع عند وجود خطر مباشر.</li>
+<li>يمنع استخدام الصفة الطبية للتستر على الجرائم أو تهريب الممنوعات.</li>
+</ol>
+
+<h3>سادساً: قوانين الرتب والإدارة</h3>
+<ol>
+<li>احترام التسلسل الإداري والرتب الطبية.</li>
+<li>يمنع انتحال رتبة أو استخدام صلاحيات غير مخولة.</li>
+<li>الالتزام بالمناوبات والتدريبات والاجتماعات الرسمية.</li>
+<li>يمنع التغيب المتكرر دون عذر مقبول.</li>
+<li>يحق للإدارة تقييم الموظفين وترقيتهم وفق الكفاءة والانضباط.</li>
+<li>يجب رفع الشكاوى والاعتراضات عبر التسلسل الإداري.</li>
+<li>يمنع إساءة استخدام الصلاحيات الإدارية أو التمييز بين الموظفين.</li>
+</ol>
+
+<h3>سابعاً: العقوبات التأديبية</h3>
+<ul>
+<li>مخالفة بسيطة: تنبيه شفهي.</li>
+<li>تكرار المخالفة: إنذار رسمي.</li>
+<li>مخالفة متوسطة: خصم نقاط أو إيقاف مؤقت.</li>
+<li>الإهمال الطبي الجسيم: تحقيق إداري وإيقاف عن العمل.</li>
+<li>استغلال الصلاحيات أو إفشاء أسرار المرضى: سحب الصلاحيات أو خفض الرتبة.</li>
+<li>التزوير أو الفساد أو التخريب المتعمد: الفصل من الوزارة، وقد تصل العقوبة إلى الحظر وفق نظام السيرفر.</li>
+</ul>
+
+<h3>ثامناً: أحكام عامة</h3>
+<ol>
+<li>تطبق القوانين على جميع موظفي وزارة الصحة دون استثناء.</li>
+<li>يجب توثيق المخالفات بالأدلة قبل إصدار العقوبة.</li>
+<li>يحق للموظف تقديم اعتراض رسمي على العقوبة.</li>
+<li>يحق للإدارة تعديل القوانين بما يتناسب مع مصلحة السيرفر.</li>
+<li>عند تعارض هذه اللائحة مع قوانين السيرفر الرسمية، يُعمل بالقوانين المعتمدة لدى إدارة السيرفر.</li>
+</ol>
+</div>
+</details>
+
+<details>
+<summary>📋 قوانين السيناريو</summary>
+<div class="content">
+<ol>
+<li>إذا تم خطفك ممنوع تتكلم في الموجة ويلزم التوجه إلى موجة الخاطف إذا كان عسكري أو مجرم.</li>
+<li>الحد المسموح للسرقات بالرهائن 3 يوميا.</li>
+<li>الحد المسموح للسرقات يوميا (مع أو بدون رهائن) 5.</li>
+<li>اذا تبي سيناريو تفتح تكت وتطلب السيناريو.</li>
+<li>يتطلب لسرقة بنك 4 رهائن.</li>
+<li>يتطلب لسرقة جواهر 2 رهائن.</li>
+<li>يتطلب لسرقة متجر أو محطة رهينة وحدة.</li>
+</ol>
+</div>
+</details>
+
+<details>
+<summary>🚔 قوانين الشرطة</summary>
+<div class="content">
+<h3>أولاً: القوانين العامة</h3>
+<ol>
+<li>الالتزام بالرول بلاي والتصرف بواقعية في جميع المواقف.</li>
+<li>احترام المواطنين وجميع أفراد القطاعات الأمنية.</li>
+<li>يمنع استغلال الرتبة أو السلطة لتحقيق مصالح شخصية.</li>
+<li>يمنع استخدام السلاح دون سبب قانوني داخل المدينة.</li>
+<li>يمنع إفشاء أسرار الشرطة أو معلومات التحقيقات.</li>
+<li>يمنع التمييز بين المواطنين أو إساءة استخدام الصلاحيات.</li>
+<li>الالتزام بأوامر الرتب الأعلى ما دامت ضمن الأنظمة.</li>
+<li>يمنع استخدام معلومات خارج اللعبة (Meta Gaming).</li>
+<li>يمنع استغلال الأخطاء البرمجية أو الصلاحيات.</li>
+<li>الالتزام بالزي الرسمي والمركبات المخصصة لكل رتبة.</li>
+</ol>
+
+<h3>ثانياً: قوانين التعامل مع المواطنين</h3>
+<ol>
+<li>يجب تعريف المواطن بنفسك عند مباشرة الحالة متى ما سمح الموقف.</li>
+<li>يمنع توقيف أي شخص دون سبب واضح أو اشتباه مبرر داخل الرول بلاي.</li>
+<li>يجب توضيح سبب التفتيش أو الاعتقال للمواطن.</li>
+<li>يمنع تفتيش المواطنين دون مسوغ نظامي أو سبب داخل السيناريو.</li>
+<li>يجب التعامل باحترام وهدوء مع المشتبه بهم.</li>
+<li>يمنع استخدام القوة المفرطة ضد المواطنين.</li>
+<li>يجب قراءة الحقوق للموقوف حسب نظام المدينة.</li>
+<li>يمنع تلفيق التهم أو زرع الأدلة ضد أي شخص.</li>
+<li>يجب توثيق المخالفات والأدلة عند الحاجة.</li>
+<li>يمنع إطلاق النار على شخص لمجرد هروبه سيرًا على الأقدام.</li>
+</ol>
+
+<h3>ثالثاً: قوانين المطاردات</h3>
+<ol>
+<li>يجب إعطاء المشتبه به إشارات وأوامر واضحة بالتوقف متى أمكن.</li>
+<li>يمنع صدم مركبة المشتبه به دون ضرورة أو مبرر مناسب.</li>
+<li>يمنع استخدام المناورات الخطرة إلا وفق مستوى التهديد وسياسة السيرفر.</li>
+<li>يجب إبلاغ العمليات عن موقع المطاردة واتجاهها.</li>
+<li>يمنع استخدام السلاح ضد مركبة لمجرد عدم امتثال السائق.</li>
+<li>يسمح باستخدام القوة المناسبة عند وجود تهديد خطير ووشيك، وفق أنظمة السيرفر.</li>
+<li>يجب إيقاف المطاردة إذا أصبحت خطورتها غير متناسبة مع المخالفة، وفق سياسة المدينة.</li>
+</ol>
+
+<h3>رابعاً: قوانين استخدام السلاح</h3>
+<ol>
+<li>السلاح آخر وسيلة عند تعذر الوسائل الأقل خطورة.</li>
+<li>يمنع إطلاق النار لمجرد التخويف أو التهديد دون مبرر.</li>
+<li>يمنع إطلاق النار على شخص أعزل إلا عند وجود تهديد خطير ووشيك يبرر ذلك وفق قوانين السيرفر.</li>
+<li>يجب التوقف عن إطلاق النار عند زوال التهديد.</li>
+<li>يمنع استخدام الأسلحة غير المصرح بها للرتبة.</li>
+<li>يمنع إطلاق النار العشوائي داخل الأحياء والأماكن العامة.</li>
+<li>يجب الإبلاغ عن أي استخدام للسلاح وكتابة تقرير عند الطلب.</li>
+</ol>
+
+<h3>خامساً: قوانين الاعتقال والتحقيق</h3>
+<ol>
+<li>يجب وجود سبب واضح للاعتقال وتحديد التهم المناسبة.</li>
+<li>يمنع احتجاز المواطنين دون اتباع إجراءات السيرفر.</li>
+<li>يمنع تعذيب الموقوفين أو إجبارهم على الاعتراف.</li>
+<li>يجب تسجيل الأدلة والشهادات المتعلقة بالقضية.</li>
+<li>يمنع مصادرة الممتلكات دون مسوغ نظامي داخل المدينة.</li>
+<li>يمنع اختلاق الأدلة أو تغيير محاضر الضبط.</li>
+<li>يجب تسليم المتهم للجهة المختصة عند انتهاء الإجراءات.</li>
+<li>يمنع الإفراج عن متهم مقابل مصلحة شخصية أو رشوة.</li>
+</ol>
+
+<h3>سادساً: قوانين الرتب والانضباط</h3>
+<ol>
+<li>احترام التسلسل الإداري داخل القطاع.</li>
+<li>يمنع انتحال رتبة أو استخدام صلاحيات رتبة أعلى.</li>
+<li>يمنع التغيب عن المناوبات دون عذر مقبول.</li>
+<li>يجب الالتزام بالتدريبات والاجتماعات الرسمية.</li>
+<li>يمنع مخالفة أوامر القيادة دون سبب مشروع، مع إمكانية رفع الاعتراض عبر التسلسل الإداري.</li>
+<li>يحق للقيادة تقييم الأفراد وترقيتهم أو محاسبتهم وفق النظام.</li>
+<li>يمنع استغلال موارد الشرطة أو مركباتها لأغراض شخصية.</li>
+</ol>
+
+<h3>سابعاً: العقوبات التأديبية</h3>
+<ul>
+<li>مخالفة بسيطة: تنبيه شفهي.</li>
+<li>تكرار المخالفة: إنذار رسمي.</li>
+<li>مخالفة متوسطة: خصم نقاط أو إيقاف مؤقت عن العمل.</li>
+<li>مخالفة جسيمة: سحب الصلاحيات أو خفض الرتبة.</li>
+<li>استغلال السلطة أو تلفيق القضايا: تحقيق إداري وقد يصل إلى الفصل.</li>
+<li>الغش أو استغلال الثغرات أو تكرار التخريب: عقوبة إدارية قد تصل إلى الحظر وفق نظام السيرفر.</li>
+</ul>
+<p>ملاحظة: تطبق العقوبات بعد التحقق من الأدلة، وتُراعى جسامة المخالفة وتكرارها. هذه لائحة مقترحة لسيرفر اللعبة، وتُقدَّم أنظمة السيرفر الرسمية عند التعارض.</p>
+<p>ملاحظة المستخدم: بعض هذه القوانين لا تثبت طويلاً.</p>
+</div>
+</details>
+
+<details>
+<summary>📖 قوانين الرول بلاي</summary>
+<div class="content">
+<h3>عدم الخروج عن الشخصية (Out of Character - OOC)</h3>
+<p>يُمنع تماماً التحدث بصفقتك الحقيقية أو مناقشة أمور خارج اللعبة داخل الرول بلاي.</p>
+
+<h3>القتل العشوائي (Death Match - DM)</h3>
+<p>يُمنع منعاً باتاً قتل أو ضرب أي لاعب آخر دون وجود سبب درامي أو قصة مسبقة قوية تبرر ذلك.</p>
+
+<h3>الدهس العشوائي (Vehicle Death Match - VDM)</h3>
+<p>يُمنع استخدام المركبات كوسيلة لدهس اللاعبين أو قتلهم بشكل عشوائي.</p>
+
+<h3>السرقة والسطو</h3>
+<p>يجب الالتزام بالحد المسموح به للمشاركين في السرقات (تختلف الأعداد حسب السيرفر) والالتزام بتعليمات الشرطة أثناء المفاوضات.</p>
+
+<h3>المناطق الآمنة (Green Zones)</h3>
+<p>يُمنع القيام بأي أعمال إجرامية (سرقة، قتل، خطف) في مناطق معينة مثل المستشفى، مركز الشرطة، والمحكمة.</p>
+
+<h3>نسيان الذاكرة (New Life Rule - NLR)</h3>
+<p>إذا تعرضت للموت الكامل وتم إنعاشك في المستشفى، تسقط شخصيتك في غيبوبة وتنسى كل الأحداث والأسماء التي أدت إلى موتك.</p>
+
+<h3>عدم العودة للحدث</h3>
+<p>يُمنع العودة إلى موقع الجريمة أو الاشتباك الذي مت فيه إلا بعد مرور وقت محدد (غالباً 15-30 دقيقة).</p>
+
+<h3>الباور جيمينج (Power Gaming)</h3>
+<p>هو إجبار شخصيتك على القيام بأفعال غير واقعية أو استغلال قدرات غير منطقية داخل الرول بلاي (RP)، أو القيام بأفعال لا يستطيع الطرف الآخر الرد عليها بشكل طبيعي.</p>
+
+<h3>الرول بلاي (Roleplay - RP)</h3>
+<p>هو تقمّص الأدوار، بحيث تلعب بشخصية داخل عالم افتراضي وتعيش حياتها كأنها حقيقية، من خلال التفاعل مع اللاعبين الآخرين والالتزام بشخصيتك وقوانين المدينة، سواء كنت مواطنًا أو شرطيًا أو مسعفًا أو مجرمًا.</p>
+
+<h3>الميتا جيمينج (Meta Gaming)</h3>
+<p>هو استخدام معلومات حصلت عليها خارج الرول بلاي، مثل الديسكورد أو البثوث أو مشاهدة الستريم، واستخدامها داخل اللعبة وكأن شخصيتك تعرفها، دون أن تحصل عليها داخل المدينة بطريقة واقعية.</p>
+</div>
+</details>
 </section>
 
 <section id="soon">
-    <h2 class="section-title">الأقسام القادمة</h2>
-
-    <div class="soon-tabs">
-        <button class="active" onclick="showTab(1, this)">SOON 1</button>
-        <button onclick="showTab(2, this)">SOON 2</button>
-    </div>
-
-    <div id="hint" class="hint">تلميح ( وزارة )</div>
-
-    <div class="slots" id="slots"></div>
+<h2 class="section-title">الأقسام القادمة</h2>
+<div class="soon-tabs">
+<button class="active" onclick="showTab(1,this)">SOON</button>
+<button onclick="showTab(2,this)">SOON</button>
+</div>
+<div class="hint" id="hint">تلميح ( وزارة )</div>
+<div class="slots" id="slots"></div>
 </section>
 
 <footer>
-    LOST TOWN | FIVEM RP
-    <p>جميع الحقوق محفوظة © 2026</p>
+LOST TOWN | FIVEM RP
+<p>جميع الحقوق محفوظة © 2026</p>
 </footer>
 
 <script>
-function showTab(number, button) {
-    document.querySelectorAll(".soon-tabs button")
-        .forEach(b => b.classList.remove("active"));
-
-    button.classList.add("active");
-
-    document.getElementById("hint").textContent =
-        number === 1 ? "تلميح ( وزارة )" : "تلميح ( ضد الدولة )";
-
-    document.getElementById("slots").innerHTML =
-        Array.from({length: 10}, () =>
-            '<div class="slot">؟؟؟</div>'
-        ).join("");
+function showTab(number,button){
+document.querySelectorAll(".soon-tabs button").forEach(b=>b.classList.remove("active"));
+button.classList.add("active");
+document.getElementById("hint").textContent=number===1?"تلميح ( وزارة )":"تلميح ( ضد الدولة )";
+document.getElementById("slots").innerHTML=Array.from({length:10},()=>'<div class="slot">؟؟؟</div>').join("");
 }
-
-showTab(1, document.querySelector(".soon-tabs button"));
+showTab(1,document.querySelector(".soon-tabs button"));
 </script>
 
 </body>
-    </html>
-        
+                                                                    </html>
+                         
